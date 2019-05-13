@@ -1,0 +1,19 @@
+.mensaje{
+    @include reset();
+    .mensaje-list{
+        @include reset();
+        .mensaje-list-item{  
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            .mensaje-col *{
+                @include reset();
+                margin-bottom: 5px;
+            }
+            .imagen{
+                max-width: 200px;
+            }
+        }
+
+    }
+}

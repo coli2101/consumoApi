@@ -1,0 +1,13 @@
+
+<section class="mensaje">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <app-componente-mensaje-form (listarEvento)="listar()">
+      </app-componente-mensaje-form>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-componente-mensaje-lista [listarElementos]="listarHijo"> 
+      </app-componente-mensaje-lista>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>

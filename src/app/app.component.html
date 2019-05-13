@@ -1,0 +1,11 @@
+<app-header [estaAutenticado]="estaAutenticado"  (cerrarSesionEvento)="cerrarSesion()" >
+  
+</app-header>
+<div *ngIf="estaAutenticado then autenticado;else noautenticado"></div>
+<ng-template #noautenticado>
+  <app-login (EmisorEvento)="autenticar($event)" ></app-login>
+</ng-template>
+<ng-template #autenticado>
+  <h2>Bienvenido</h2>
+  <router-outlet></router-outlet>
+</ng-template>

@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <h2>Lista de mensajes</h2>
+
+  <ul class="mensaje-list">
+    <li class="mensaje-list-item" *ngFor='let mensaje of mensajes | async'>
+      <div class="mensaje-col">
+        <h3><a routerLink="{{mensaje._id}}">{{mensaje.nombre}}</a></h3>
+        <h4>{{mensaje.correo}}</h4>
+        <p>{{mensaje.mensaje}}</p>
+        <p *ngIf="mensaje.imagen"><img class="imagen" [src]="mensaje.imagen" alt="imagen"></p>
+      </div>
+      <div class="mensaje-col">
+        <button mat-mini-fab color="warn" (click)="borrar(mensaje._id)">-</button>
+      </div>
+    </li>
+  </ul>
+</mat-card>
+<router-outlet></router-outlet>

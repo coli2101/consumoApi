@@ -1,0 +1,16 @@
+<mat-card class="card card-form">
+    <h2>Iniciar sesion</h2>
+  <form class="form">
+    <mat-form-field class="form-field">
+      <input matInput type="email" name="correo" placeholder="Correo" [(ngModel)]="usuario">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input matInput type="password" name="clave" placeholder="Clave" [(ngModel)]="clave">
+    </mat-form-field>
+  </form>
+  <p *ngIf="mensaje">{{mensaje}}</p>
+  <button mat-raised-button color="primary" (click)="autenticar()">Entrar</button>
+  <p class="center"><a class="link" (click)="mostrarDialog('passwordRecovery')">¿Olvidaste tu clave?</a></p>
+  <p class="center"><a class="link" (click)="mostrarDialog('signUp')">Crear cuenta nueva</a></p>
+</mat-card>
